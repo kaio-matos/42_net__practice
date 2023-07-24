@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Net Practice</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {}
+	</script>
+	<style>
+		html {
+			font-size: 150%;
+		}
+	</style>
+</head>
+<body class="p-5 bg-gray-500 text-black/70">
+
+	<div class="flex flex-col gap-3">
+		<b class="text-white/60">Decimal Notation</b>
+
+		<label class="block">IPV4 Address</label>
+		<input
+			type="text"
+			id="input-ipv4"
+			placeholder="196.168.0.1"
+			onkeyup="onChangeIP(event)"
+			class="p-2 bg-gray-700 text-white border rounded outline-none transition-all focus:ring focus:ring-gray-400"
+		/>
+		<label class="block">Mask</label>
+		<input
+			type="text"
+			id="input-mask"
+			placeholder="255.255.255.0"
+			onkeyup="onChangeMask(event)"
+			class="p-2 bg-gray-700 text-white border rounded outline-none transition-all focus:ring focus:ring-gray-400"
+		/>
+
+
+		<div class="flex flex-col gap-3">
+			<b class="text-white/60">Binary Notation</b>
+
+			<label>IPV4 Address</label>
+			<input
+				type="text"
+				id="input-ipv4-binary"
+				placeholder="00000000.00000000.00000000.00000000"
+				onkeyup="onChangeIPBinary(event)"
+				class="block w-full p-2 bg-gray-700 text-white border rounded outline-none transition-all focus:ring focus:ring-gray-400"
+			/>
+
+			<label>Mask</label>
+			<input
+				type="text"
+				id="input-mask-binary"
+				placeholder="11111111.11111111.11111111.00000000"
+				onkeyup="onChangeMaskBinary(event)"
+				class="block w-full p-2 bg-gray-700 text-white border rounded outline-none transition-all focus:ring focus:ring-gray-400"
+			/>
+		</div>
+
+		<div class="flex flex-col gap-3">
+			<b class="text-white/60">Amount of 1's</b>
+
+			<div class="flex w-full gap-3">
+				<div class="flex-grow">
+					<label>Amount</label>
+					<input
+						type="text"
+						id="input-mask-binary-amount"
+						onkeyup="onChangeMaskBinaryAmount(event)"
+						placeholder="/24"
+						class="block w-full p-2 bg-gray-700 text-white border rounded outline-none transition-all focus:ring focus:ring-gray-400"
+					/>
+				</div>
+
+				<div class="flex-grow">
+					<label>Binary</label>
+					<input
+						type="text"
+						id="input-mask-binary-amount-binary"
+						onkeyup="onChangeMaskBinaryAmountBinary(event)"
+						placeholder="11111111.11111111.11111111.00000000"
+						class="block w-full p-2 bg-gray-700 text-white border rounded outline-none transition-all focus:ring focus:ring-gray-400"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="flex flex-col gap-3">
+			<b class="text-white/60">Simple Conversion</b>
+
+			<div class="flex gap-3">
+				<div>
+					<label>Number</label>
+					<input
+						type="text"
+						id="input-number"
+						onkeyup="onChangeNumber(event)"
+						class="block w-full p-2 bg-gray-700 text-white border rounded outline-none transition-all focus:ring focus:ring-gray-400"
+					/>
+				</div>
+
+				<div>
+					<label>Binary</label>
+					<input
+						type="text"
+						id="input-number-binary"
+						onkeyup="onChangeNumberBinary(event)"
+						class="block w-full p-2 bg-gray-700 text-white border rounded outline-none transition-all focus:ring focus:ring-gray-400"
+					/>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
